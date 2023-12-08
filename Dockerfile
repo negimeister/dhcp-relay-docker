@@ -1,11 +1,4 @@
-# Use Alpine Linux 3.18.4 as the base image
-FROM alpine:3.19.0
-
-# Install MPD (Music Player Daemon)
-RUN apk add --no-cache mpd mpc
-
-# Expose the default port for MPD
-EXPOSE 6600
-
-# Run MPD in the foreground
-CMD ["mpd", "--no-daemon", "--stdout", "--verbose"]
+FROM alpine:v3.19.0
+RUN apk --no-cache add dhcp-helper
+EXPOSE 67 67/udp
+ENTRYPOINT ["dhcp-helper", "-n"]
