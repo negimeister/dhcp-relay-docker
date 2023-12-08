@@ -31,5 +31,5 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: negimeister/mpd-alpine:${{ steps.alpine-version.outputs.version }}
+        tags: negimeister/dhcp-relay:${{ steps.alpine-version.outputs.version }}
 
