@@ -1,6 +1,7 @@
 name: Build and Push Docker Image
 
 on:
+  workflow-dispatch:
   push:
     branches: 
       - main  # Trigger the workflow on push events to the main branch
